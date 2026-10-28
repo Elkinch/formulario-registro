@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Registro | Taller de Cerámica</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;700&family=Fraunces:opsz,wght@9..144,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="card">
+    <header>
+      <h1>Reserva tu cupo en el taller</h1>
+      <p>Cuatro sábados modelando arcilla. Cupos limitados a 12 personas.</p>
+    </header>
+
+    <form id="form" novalidate>
+      <div class="field">
+        <label for="nombre">Nombre completo</label>
+        <input id="nombre" name="nombre" type="text" autocomplete="name" placeholder="Ana Pérez">
+        <small class="error" aria-live="polite"></small>
+      </div>
+
+      <div class="field">
+        <label for="correo">Correo electrónico</label>
+        <input id="correo" name="correo" type="email" autocomplete="email" placeholder="ana@correo.com">
+        <small class="error" aria-live="polite"></small>
+      </div>
+
+      <div class="row">
+        <div class="field">
+          <label for="telefono">Celular</label>
+          <input id="telefono" name="telefono" type="tel" inputmode="numeric" placeholder="0991234567">
+          <small class="error" aria-live="polite"></small>
+        </div>
+        <div class="field">
+          <label for="nacimiento">Fecha de nacimiento</label>
+          <input id="nacimiento" name="nacimiento" type="date">
+          <small class="error" aria-live="polite"></small>
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="clave">Contraseña</label>
+        <input id="clave" name="clave" type="password" autocomplete="new-password" placeholder="Mínimo 8 caracteres">
+        <div class="meter" aria-hidden="true"><span id="meter-bar"></span></div>
+        <small class="hint" id="meter-text">Usa mayúscula, número y símbolo.</small>
+        <small class="error" aria-live="polite"></small>
+      </div>
+
+      <div class="field">
+        <label for="clave2">Repite la contraseña</label>
+        <input id="clave2" name="clave2" type="password" autocomplete="new-password">
+        <small class="error" aria-live="polite"></small>
+      </div>
+
+      <div class="field check">
+        <label><input id="terminos" name="terminos" type="checkbox"> Acepto las condiciones del taller</label>
+        <small class="error" aria-live="polite"></small>
+      </div>
+
+      <button type="submit">Reservar mi cupo</button>
+    </form>
+
+    <section id="exito" class="exito" hidden>
+      <h2>¡Cupo reservado!</h2>
+      <p id="exito-texto"></p>
+      <button type="button" id="otro">Registrar a otra persona</button>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
